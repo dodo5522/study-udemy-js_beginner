@@ -1,0 +1,50 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <title>税込み計算Webアプリケーション</title>
+    <link rel="stylesheet" type="text/css" href="../lib/css/jquery-ui.min.css">
+    <link rel="stylesheet" type="text/css" href="../lib/css/jquery-ui.theme.min.css">
+    <link rel="stylesheet" type="text/css" href="../lib/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/mine.css">
+  </head>
+
+  <body>
+    <div class="container">
+      <h1>税込み計算アプリ</h1>
+      <div class="form-group">
+        <label for="price">金額</label>
+        <input class="form-control" type="number" id="price" name="name" placeholder="1000">
+      </div>
+      <div class="form-group">
+        <label for="tax">税率</label>
+        <input class="form-control" type="number" id="tax" name="name" placeholder="8">
+      </div>
+
+      <div class="row">
+        <!--<div class="col-sm-4"><button class="btn btn-warning">a</button></div>-->
+        <div class="col-sm-12">
+          <button class="btn btn-primary btn-block" id="doOperation">算出する</button>
+        </div>
+        <!--<div class="col-sm-4"><button class="btn btn-warning">b</button></div>-->
+      </div>
+
+      <div class="text-center">
+        <div class="caret caret-large"></div>
+      </div>
+
+      <div class="form-group">
+        <label for="taxAmount">税額</label>
+        <input class="form-control" id="taxAmount" type="number" readonly="readonly">
+      </div>
+      <div class="form-group">
+        <label for="taxIncluded">税込み価格</label>
+        <input class="form-control" id="taxIncluded" type="number" readonly="readonly">
+      </div>
+
+    </div>
+    <script src="../lib/js/jquery-3.1.1.min.js"></script>
+    <script src="../lib/js/jquery-ui.min.js"></script>
+    <script src="js/mine.js"></script>
+  </body>
+</html>
+
