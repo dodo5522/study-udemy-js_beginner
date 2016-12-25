@@ -23,10 +23,21 @@ $(function() {
     });
   };
 
+  var copySex = function() {
+    $('input[type="radio"][name="sex"]').each(function() {
+      var srcId = "#" + $(this).prop("id");
+      var dstId = srcId + "2";
+      var checked = $(this).prop("checked");
+
+      $(dstId).prop("checked", checked);
+    });
+  };
+
   var copyAll = function() {
     copyName();
     copyOk();
     copyHobby();
+    copySex();
   };
 
   // event handler登録
