@@ -29,6 +29,7 @@ $(function() {
     copyHobby();
   };
 
+  // event handler登録
   $("#btnCopy").click(function() {
     copyAll();
   });
