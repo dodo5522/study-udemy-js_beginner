@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>アンケートっぽい何か</title>
+  <link rel="stylesheet" href="../lib/css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/mine.css">
+</head>
+<body>
+  <div class="container">
+    <h1>アンケートっぽい何か</h1>
+    <form id="f" action="/" name="f">
+      <div class="panel panel-default">
+        <div class="panel panel-heading">入力エリア１</div>
+        <div class="panel-body">
+          <div class="form-group">
+            <label for="">名前</label>
+            <!--<input id="name" type="text" name="name">-->
+            <input id="name" class="form-control" type="text" name="name">
+          </div>
+
+          <div class="form-group">
+            <p><label for="ok">OK?</label></p>
+            <!--<input id="ok" class="form-control" type="checkbox" name="check" value="ok" checked>-->
+            <input id="ok" type="checkbox" name="ok" value="ok">
+          </div>
+
+          <div class="form-group">
+            <p><label class="control-label">趣味</label></p>
+            <label class="checkbox-inline" for="hobbyMovie">
+              <input id="hobbyMovie" type="checkbox" name="hobbyMovie">映画
+            </label>
+            <label class="checkbox-inline" for="hobbyComic">
+              <input id="hobbyComic" type="checkbox" name="hobbyComic">漫画
+            </label>
+          </div>
+
+          <div class="form-group">
+            <p><label class="control-label">性別</label></p>
+            <div class="radio-inline">
+              <label><input id="sexMale" name="sexMale" type="radio" checked>男</label>
+            </div>
+            <div class="radio-inline">
+              <label><input id="sexFemale" name="sexFemale" type="radio">女</label>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <p><label class="control-label">このサイトを知ったきっかけ</label></p>
+            <select multiple id="listOpt" class="form-control" name="listOpt">
+              <option value="optFacebook">Facebook</option>
+              <option value="optTwitter">Twitter</option>
+              <option value="optGoogleSearch">Google検索</option>
+              <option value="optYahooSearch">Yahoo検索</option>
+              <option value="another">その他</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <p><label class="control-label" for="">自由記入</label></p>
+            <textarea id="freeText" class="form-control" name="freeText" cols="30" rows="10"></textarea>
+          </div>
+
+        </div>
+        <div class="panel panel-footer">
+          <button id="btnCopy" class="btn btn-default" type="button">コピー</button>
+          <button id="btnSubmit" class="btn btn-default" type="submit">決定</button>
+        </div>
+      </div>
+
+      <div class="panel panel-default">
+        <div class="panel-heading">入力エリア２</div>
+        <div class="panel-body">
+          <div class="form-group">
+            <label for="">名前</label>
+            <input id="name2" class="form-control" type="text">
+          </div>
+
+          <div class="form-group">
+            <p><label class="control-label" for="ok2">OK?</label></p>
+            <input id="ok2" type="checkbox">
+          </div>
+
+          <div class="form-group">
+            <p><label class="control-label" for="">趣味</label></p>
+            <label class="radio-inline"><input id="cinema2" type="radio" name="cinema2">映画</label>
+            <label class="radio-inline">
+              <input id="comic" class="radio-inline" type="radio" name="comic2">漫画
+            </label>
+          </div>
+
+          <div class="form-group">
+            <p><label class="control-label">性別</label></p>
+            <label class="radio-inline"><input id="sexMale2" type="radio">男性</label>
+            <label class="radio-inline"><input id="sexFemale2" type="radio">女性</label>
+          </div>
+
+          <select multiple id="litOpt2" class="form-control" name="litOpt2">
+            <option value="optFacebook">Facebook</option>
+            <option value="optTwitter">Twitter</option>
+            <option value="optGoogleSearch">Google検索</option>
+            <option value="optYahooSearch">Yahoo検索</option>
+            <option value="another">その他</option>
+          </select>
+
+          <div class="form-group">
+            <label class="control-label" for="">自由記入</label>
+            <textarea id="freeText2" class="form-control" name="freeText2" cols="30" rows="10"></textarea>
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
+
+  <script src="../lib/js/jquery-3.1.1.min.js"></script>
+  <script src="../lib/js/bootstrap.min.js"></script>
+  <script src="js/mine.js"></script>
+</body>
+</html>
