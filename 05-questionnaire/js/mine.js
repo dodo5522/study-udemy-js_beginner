@@ -12,14 +12,10 @@ $(function() {
   var copyHobby = function() {
     $("input[type=checkbox][name=hobby]").each(function() {
       var srcId = "#" + $(this).prop("id");
-      var destId = "#" + $(this).prop("id") + "2";
+      var dstId = srcId + "2";
       var val = $(this).prop("checked");
 
-      console.log(val);
-      console.log(srcId);
-      console.log(destId);
-
-      $(destId).prop("checked", val);
+      $(dstId).prop("checked", val);
     });
   };
 
