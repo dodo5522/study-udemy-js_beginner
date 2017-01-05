@@ -29,11 +29,19 @@ $(function() {
     });
   };
 
+  var copyOpartunity = function() {
+    var srcId = "#" + "listOpt";
+    var dstId = srcId + "2";
+    var selectedValues = $(srcId).val();
+    $(dstId).val(selectedValues);
+  };
+
   var copyAll = function() {
     copyName();
     copyOk();
     copyHobby();
     copySex();
+    copyOpartunity();
   };
 
   // event handler登録
