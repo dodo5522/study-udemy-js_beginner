@@ -36,12 +36,19 @@ $(function() {
     $(dstId).val(selectedValues);
   };
 
+  var copyFreeText = function() {
+    var srcId = "#freeText";
+    var dstId = srcId + "2";
+    $(dstId).val($(srcId).val());
+  };
+
   var copyAll = function() {
     copyName();
     copyOk();
     copyHobby();
     copySex();
     copyOpartunity();
+    copyFreeText();
   };
 
   // event handler登録
