@@ -55,4 +55,32 @@ $(function() {
   $("#btnCopy").click(function() {
     copyAll();
   });
+
+  var msgError = {
+    ERR_NO_NAME : "名前が空です。",
+    ERR_NO_OPT : "きっかけが空です。",
+    ERR_NO_CHECK : "OKチェックがされていません。",
+  };
+
+  var checkBlank = function() {
+    if($("#name").val() == ""){
+      return msgError.ERR_NO_NAME;
+    }
+    else if($("#ok").prop("checked") == false){
+      return msgError.ERR_NO_CHECK;
+    }
+    else if($("#listOpt").val() == ""){
+      return msgError.ERR_NO_OPT;
+    }
+
+    return "";
+  };
+
+  // submit event handerを登録
+  $("#f").submit(function(){
+    if((msg = checkBlank()) != ""){
+      alert(msg);
+      return false;
+    }
+  });
 });
