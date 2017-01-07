@@ -56,29 +56,25 @@ $(function() {
     copyAll();
   });
 
-  var msgError = {
-    ERR_NO_NAME : "名前が空です。",
-    ERR_NO_OPT : "きっかけが空です。",
-    ERR_NO_CHECK : "OKチェックがされていません。",
-  };
+  var tableToCheckError = [
+    {isSuccess: function(){return ($("#name").val() == "");},            msg: "名前が空です。"},
+    {isSuccess: function(){return ($("#ok").prop("checked") == false);}, msg: "OKチェックがされていません。"},
+    {isSuccess: function(){return ($("#listOpt").val() == "");},         msg: "きっかけが空です。"}
+  ];
 
-  var checkBlank = function() {
-    if($("#name").val() == ""){
-      return msgError.ERR_NO_NAME;
+  var getMsgIfError = function() {
+    for(var i = 0; i < tableToCheckError.length; i++){
+      var cur = tableToCheckError[i];
+      if(cur["isSuccess"]()){
+        return cur["msg"];
+      }
     }
-    else if($("#ok").prop("checked") == false){
-      return msgError.ERR_NO_CHECK;
-    }
-    else if($("#listOpt").val() == ""){
-      return msgError.ERR_NO_OPT;
-    }
-
     return "";
   };
 
   // submit event handerを登録
   $("#f").submit(function(){
-    if((msg = checkBlank()) != ""){
+    if((msg = getMsgIfError()) != ""){
       alert(msg);
       return false;
     }
